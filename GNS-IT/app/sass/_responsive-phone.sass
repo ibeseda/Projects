@@ -1,0 +1,72 @@
+$phone1: "only screen and (max-device-width: 425px)"
+$phone2: "only screen and (max-device-width: 320px)"
+
+@media #{$phone1}
+	header .col-xs-7
+		width: 70%
+		float: right
+	.btn-message
+		margin-left: 0
+	.favorite
+		display: none
+	section .container
+		height: 250px
+	h1
+		padding-top: 15px
+		span
+			display: block
+	h2
+		display: none
+	h3
+		padding-top: 5px
+	input[type=search]
+		height: 45px
+		border: 3px solid #2ba441
+		padding-left: 10px
+		background: #fff
+	.search > ul
+			top: 40px
+			border: 3px solid #2ba441	
+			border-top: none	
+	.search li
+		padding: 10px
+	.change
+		width: 110px
+		font-size: 14px
+		top: 3px
+		right: 3px
+		span
+			padding-left: 3px
+			background-position: 95px 18px
+			margin: 1px 0
+		.action
+			background-position: 95px 18px
+			margin-bottom: 1px
+		.category label
+			padding-left: 5px
+	.slider
+		width: 260px
+		margin: 15px auto
+	footer .brand
+		margin-bottom: 0
+		p
+			padding-top: 5px
+@media #{$phone2}
+	section .container
+		height: 200px
+	h1
+		display: none
+	h3
+		padding-top: 90px
+		padding-bottom: 10px
+		text-align: center
+
+
+	.search > ul
+		top: 40px
+		border: 3px solid #2ba441
+		border-top: none
+	.search li
+		padding: 10px
+	article
+		padding: 25px 0

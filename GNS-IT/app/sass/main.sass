@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700')
+@font-face
+	font-family: 'Museo Sans Cyrl 900'
+	font-style: normal
+	font-weight: normal
+	src: local('Museo Sans Cyrl 900'), url('../fonts/MuseoSansCyrl_3.woff') format('woff')
+
+$black: #3b3b3b
+$orange: #ff8a00
+
+body
+	font-family: 'Roboto', sans-serif
+a
+	text-decoration: none
+	color: #fff
+.fz20
+	font-size: 20px
+.light
+	font-weight: 300
+.cursor
+	cursor: pointer
+h1
+	font-weight: 100
+	font-size: 50px
+	padding-top: 40px
+	padding-bottom: 10px
+h2
+	font-weight: 700
+	@extend .fz20
+	text-transform: uppercase
+h3
+	@extend .fz20
+	@extend .light
+	padding: 63px 0
+h4
+	@extend .light
+	font-size: 24px
+	&:after
+		display: block
+		content: ''
+		width: 50px
+		height: 5px
+		background: $orange
+header
+	font-size: 15px
+	background: $black
+	.container
+		line-height: 50px
+.menu-toggle
+	display: none
+	@extend .cursor
+	background: url("../img/menu.jpg") no-repeat
+	width: 35px
+	height: 49px
+	border: none
+	outline: none
+.menu
+	display: table
+	width: 100%
+	margin-left: -20px
+	li
+		display: table-cell
+	li a
+		padding: 17px 22px
+
+		&:hover
+			background: #000
+			position: relative
+
+		&:hover:before
+			content: ''
+			border-bottom: 3px solid $orange
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+
+		&:hover:after
+			content: ''
+			width: 0
+			height: 0
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-bottom: 5px solid $orange
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 2px
+			margin: 0 auto
+.btn-message
+	background: $orange
+	font-size: 16px
+	padding: 16px
+	margin-left: 90px
+.favorite
+	padding-left: 33px
+	position: relative
+	left: 50px
+	opacity: .5
+	img
+		position: absolute
+		left: -16px
+		top: -16px
+
+section
+	background: #edf2f5
+	background: linear-gradient(to right, #edf2f5, #f3f7f8)
+	.container
+		background: #edf2f5 url("../img/people.jpg") no-repeat right top
+		background-size: cover
+		height: 397px
+
+.search
+	position: relative
+
+input[type=search]
+	width: 100%
+	height: 60px
+	border: 5px solid #2ba441
+	padding-left: 65px
+	color: #bebebe
+	font-size: 14px
+	background: #fff url("../img/search.png") no-repeat 15px
+.search > ul
+	background: #fff
+	display: none
+	padding: 5px 0
+	position: absolute
+	top: 50px
+	z-index: 10
+	width: 100%
+	border: 5px solid #2ba441
+	border-top: none
+	
+.search li
+	display: block
+	padding: 10px 60px
+
+.search li:hover
+	background: #aaa
+	@extend .cursor
+.change
+	position: absolute
+	top: 5px
+	right: 5px
+	z-index: 100
+	background: #fff
+	width: 218px
+	span
+		display: block
+		@extend .cursor
+		height: 36px
+		margin: 7px 0
+		padding: 10px 0 10px 70px
+		border-left: 1px solid #dedede
+		background: url("../img/change-open.png") no-repeat 180px 18px
+	.action
+		background: url("../img/change-close.png") no-repeat 180px 18px
+		margin-bottom: 9px
+	.category
+		display: none
+		box-shadow: 2px 3px 2px #ccc
+		label			
+			@extend .cursor
+			display: block
+			line-height: 30px
+			padding-left: 55px
+			&:hover
+				background: #efefef
+		input[type=radio]
+			display: none
+		input[type=radio] + label:before
+			content: ''
+			display: inline-block 
+			width: 15px 
+			height: 10px
+		input[type=radio]:checked + label:before
+			background: url("../img/select.png") no-repeat
+
+article
+	padding: 50px 0 25px
+	p
+		@extend .light
+		font-size: 14px
+		text-indent: 26px
+		text-align: justify		
+	.text-left
+		padding-right: 20px
+	.text-right
+		padding-left: 10px
+
+.slider
+	width: 1110px
+	margin: 40px auto 50px
+	padding: 0 30px
+	position: relative
+
+.slide-list
+	position: relative
+	margin: 0
+	padding: 0
+	overflow: hidden
+.slide-wrap
+	position: relative
+	left: 0px
+	top: 0
+	width: 10000000px
+.slide-item
+	width: 197px
+	padding: 0 45px
+	float: left
+.navig
+	position: absolute
+	top: 0
+	z-index: 1
+	height: 100%
+	width: 30px
+	@extend .cursor
+.prev-slide
+	left: 0
+	background: url(../img/prev.png) no-repeat left center
+.next-slide
+	right: 0
+	background: url(../img/next.png) no-repeat right center
+
+footer
+	background: $black
+	padding: 25px 0 20px
+	.brand
+		a
+			font-size: 31px
+			font-family: 'Museo Sans Cyrl 900'
+		span
+			font-size: 8px
+			text-transform: uppercase
+			display: block
+			color: #fff
+			letter-spacing: 2.6px
+		p
+			font-size: 12px
+			color: #9d9d9d
+			@extend .light
+			padding-top: 25px
+	.block
+		padding: 0 15px
+		a
+			font-size: 13px
+			@extend .light
+			padding-right: 15px
+			&:hover
+				color: #31bb49
+	h5
+		font-weight: 700
+		font-size: 14px
+		color: #818181
+		text-transform: uppercase
+		padding-bottom: 15px
+	.square
+		content: ""
+		width: 15px
+		height: 15px
+		left: -5px
+		bottom: -3px
+		position: relative
+		display: inline-block
+
+	.fb:before
+		background: #0458a6
+		@extend .square
+	.vk:before
+		background: #356088
+		@extend .square
+	.tw:before
+		background: #0c84f5
+		@extend .square
+	.soc
+		margin-left: 5px
+		padding-right: 10px !important
+
+@import 'responsive-tablet'
+@import 'responsive-phone'
